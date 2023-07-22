@@ -10,6 +10,7 @@ const nodemailer = require("nodemailer")
 const dotenv = require("dotenv");
 const md5 = require("md5");
 const MONGO_URI = process.env.MONGO_URI;
+const PORT = process.env.PORT || 5000;
 
 const sendGridTransport = require('nodemailer-sendgrid-transport');
 const {SENDGRID_API} = require('./config/keys');
@@ -254,6 +255,6 @@ app.post('/send',  async (req, res) => {
 
 
 
-app.listen(5000, function () {
+app.listen(PORT, function () {
     console.log(`port running at 5000`);
 });
