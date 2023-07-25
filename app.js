@@ -13,7 +13,7 @@ const MONGO_URI = process.env.MONGO_URI;
 const PORT = process.env.PORT || 5000;
 
 const sendGridTransport = require('nodemailer-sendgrid-transport');
-// const {SENDGRID_API} = require('./config/keys');
+
 const SENDGRID_API = process.env.SENDGRID_API;
 
 dotenv.config();
